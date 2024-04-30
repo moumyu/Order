@@ -1,0 +1,15 @@
+.container {
+  background: url(/images/background.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.menu-left {
+  background-color: #e6e6e6;
+}
+
+.banner {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+}

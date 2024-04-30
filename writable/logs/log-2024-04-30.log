@@ -1,0 +1,176 @@
+CRITICAL - 2024-04-30 05:52:15 --> Error: Class "App\Controllers\ProductModel" not found
+[Method: POST, Route: AdminProductsController/add]
+in APPPATH\Controllers\AdminProductsController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->add()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 06:17:15 --> Error: Undefined constant "SigninController"
+[Method: GET, Route: admin-products]
+in APPPATH\Views\admin_products.php on line 65.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_products', [], true)
+ 4 APPPATH\Controllers\AdminProductsController.php(13): view('admin_products', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 06:17:15 --> Error: Undefined constant "SigninController"
+[Method: GET, Route: admin-products]
+in APPPATH\Views\admin_products.php on line 65.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_products', [], true)
+ 4 APPPATH\Controllers\AdminProductsController.php(13): view('admin_products', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 06:19:30 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: admin-products]
+in APPPATH\Views\admin_products.php on line 69.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_products', [], true)
+ 3 APPPATH\Controllers\AdminProductsController.php(13): view('admin_products', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 06:19:31 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: admin-products]
+in APPPATH\Views\admin_products.php on line 69.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_products', [], true)
+ 3 APPPATH\Controllers\AdminProductsController.php(13): view('admin_products', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 06:19:37 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: admin-products]
+in APPPATH\Views\admin_products.php on line 66.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_products', [], true)
+ 3 APPPATH\Controllers\AdminProductsController.php(13): view('admin_products', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 06:19:38 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: admin-products]
+in APPPATH\Views\admin_products.php on line 66.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_products', [], true)
+ 3 APPPATH\Controllers\AdminProductsController.php(13): view('admin_products', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminProductsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminProductsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:18:41 --> ErrorException: Undefined property: App\Controllers\ProductController::$input
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 10.
+ 1 APPPATH\Controllers\ProductController.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ProductController::$input', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\ProductController.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:18:41 --> ErrorException: Undefined property: App\Controllers\ProductController::$input
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 10.
+ 1 APPPATH\Controllers\ProductController.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ProductController::$input', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\ProductController.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:19:16 --> Error: Class "App\Controllers\ProductModel" not found
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:19:16 --> Error: Class "App\Controllers\ProductModel" not found
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:19:35 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 14.
+ 1 APPPATH\Controllers\ProductController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\ProductController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:19:35 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 14.
+ 1 APPPATH\Controllers\ProductController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\ProductController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:20:44 --> ErrorException: Undefined array key "type"
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 11.
+ 1 APPPATH\Controllers\ProductController.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "type"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\ProductController.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-04-30 07:20:45 --> ErrorException: Undefined array key "type"
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 11.
+ 1 APPPATH\Controllers\ProductController.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "type"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\ProductController.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
