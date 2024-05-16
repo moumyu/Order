@@ -1,7 +1,8 @@
 <?php 
 namespace App\Models;  
 use CodeIgniter\Model;
-  
+
+// UserModel class
 class UserModel extends Model{
     protected $table = 'users';
     

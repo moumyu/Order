@@ -5,6 +5,7 @@ use App\Models\ProductModel;
   
 class AdminProductsController extends Controller
 {
+    // Method to display all products in the admin panel.
     public function index()
     {
         $session = session();
@@ -13,6 +14,7 @@ class AdminProductsController extends Controller
         echo view('admin_products', $data);
     }
 
+    // Method to display the add product form.
     public function addView() 
     {
         helper(['form']);
@@ -21,6 +23,7 @@ class AdminProductsController extends Controller
         echo view('admin_add_product');
     }
 
+    // Method to add a new product.
     public function add() 
     {
         helper(['form']);
@@ -47,6 +50,7 @@ class AdminProductsController extends Controller
         }
     }
 
+    // Method to remove a product.
     public function remove($id = null)
     {
         $session = session();
@@ -55,6 +59,7 @@ class AdminProductsController extends Controller
         return redirect()->to('/admin-products');
     }
 
+    // Method to display the edit product form.
     public function edit($id = null)
     {
         helper(['form']);
@@ -64,6 +69,7 @@ class AdminProductsController extends Controller
         echo view('admin_edit_product', $data);
     }
 
+    // Method to update a product.
     public function update()
     {
         helper(['form']);

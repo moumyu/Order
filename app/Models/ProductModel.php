@@ -2,6 +2,7 @@
 namespace App\Models;  
 use CodeIgniter\Model;
   
+// ProductModel class
 class ProductModel extends Model {
     protected $table = 'products';
     

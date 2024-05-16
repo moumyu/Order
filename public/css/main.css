@@ -4,7 +4,7 @@
 }
 
 .menu-left {
-  background-color: #e6e6e6;
+  border-right: 1px solid #e1e1e1;
 }
 
 .banner {
@@ -12,4 +12,77 @@
   width: 100%;
   object-fit: cover;
   padding: 0;
+}
+
+.menu-left a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-left a:hover {
+  background-color: #f7a336;
+  color: white;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 20%;
+  margin-left: 2.5%;
+  background-color: #f7a336;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cart-action {
+  display: flex;
+  align-items: center;
+}
+
+.cart-btn {
+  background-color: #f7a336;
+  color: white;
+  border: none;
+  /* border-radius: 5px; */
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 34px;
+  text-align: center;
+}
+
+.cart-btn button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.cart-btn:hover {
+  background-color: #f58200;
+}
+
+.carts-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@media (min-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order {
+    width: 90vw;
+    margin: 0 5vw;
+  }
 }

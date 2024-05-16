@@ -1,0 +1,1641 @@
+ERROR - 2024-05-16 07:48:18 --> mysqli_sql_exception: Table 'order.carts' doesn't exist in D:\phpstudy_pro\WWW\Order\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\phpstudy_pro\WWW\Order\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\phpstudy_pro\WWW\Order\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\phpstudy_pro\WWW\Order\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\phpstudy_pro\WWW\Order\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\phpstudy_pro\WWW\Order\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\phpstudy_pro\WWW\Order\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\phpstudy_pro\WWW\Order\app\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\phpstudy_pro\WWW\Order\system\CodeIgniter.php(933): App\Controllers\ProductController->index()
+#8 D:\phpstudy_pro\WWW\Order\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 D:\phpstudy_pro\WWW\Order\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\phpstudy_pro\WWW\Order\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\phpstudy_pro\WWW\Order\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\phpstudy_pro\WWW\Order\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\phpstudy_pro\WWW\Order\system\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro...')
+#14 {main}
+CRITICAL - 2024-05-16 07:48:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'order.carts' doesn't exist
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `carts`
+WHERE `user` = :user:', [...], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:48:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'order.carts' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `carts`
+WHERE `user` = :user:', [...], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:48:18 --> [Caused by] mysqli_sql_exception: Table 'order.carts' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `carts`
+WHERE `user` = :user:', [...], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+ERROR - 2024-05-16 07:48:18 --> mysqli_sql_exception: Table 'order.carts' doesn't exist in D:\phpstudy_pro\WWW\Order\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\phpstudy_pro\WWW\Order\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\phpstudy_pro\WWW\Order\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\phpstudy_pro\WWW\Order\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\phpstudy_pro\WWW\Order\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\phpstudy_pro\WWW\Order\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\phpstudy_pro\WWW\Order\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\phpstudy_pro\WWW\Order\app\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\phpstudy_pro\WWW\Order\system\CodeIgniter.php(933): App\Controllers\ProductController->index()
+#8 D:\phpstudy_pro\WWW\Order\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 D:\phpstudy_pro\WWW\Order\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\phpstudy_pro\WWW\Order\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\phpstudy_pro\WWW\Order\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\phpstudy_pro\WWW\Order\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\phpstudy_pro\WWW\Order\system\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro...')
+#14 {main}
+CRITICAL - 2024-05-16 07:48:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'order.carts' doesn't exist
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `carts`
+WHERE `user` = :user:', [...], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:48:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'order.carts' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `carts`
+WHERE `user` = :user:', [...], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:48:18 --> [Caused by] mysqli_sql_exception: Table 'order.carts' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `carts`
+WHERE `user` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `carts`
+WHERE `user` = :user:', [...], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ProductController.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:53:33 --> Error: Undefined constant "length"
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 50.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 4 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:53:33 --> Error: Undefined constant "length"
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 50.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 4 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:53:57 --> Error: Undefined constant "length"
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 50.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 4 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:53:58 --> Error: Undefined constant "length"
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 50.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 4 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:54:06 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 50.
+ 1 APPPATH\Views\products.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 50)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 07:54:06 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 50.
+ 1 APPPATH\Views\products.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 50)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:18:30 --> ErrorException: Undefined variable $products
+[Method: POST, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(39): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:18:31 --> ErrorException: Undefined variable $products
+[Method: GET, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(39): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:19:30 --> ErrorException: Undefined variable $session
+[Method: POST, Route: CartController/add]
+in APPPATH\Controllers\CartController.php on line 31.
+ 1 APPPATH\Controllers\CartController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\CartController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:19:30 --> ErrorException: Undefined variable $products
+[Method: GET, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(39): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:25:22 --> BadMethodCallException: Call to undefined method App\Models\CartModel::getNumRows
+[Method: POST, Route: CartController/add]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->__call('getNumRows', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:25:22 --> ErrorException: Undefined variable $products
+[Method: GET, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(43): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:27:06 --> Error: Call to undefined method stdClass::getRow()
+[Method: POST, Route: CartController/add]
+in APPPATH\Controllers\CartController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:27:07 --> ErrorException: Undefined variable $products
+[Method: GET, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(43): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:42:17 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 44.
+ 1 APPPATH\Views\products.php(44): in_array([...], '3')
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:42:18 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 44.
+ 1 APPPATH\Views\products.php(44): in_array([...], '3')
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:52:22 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:52:22 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:56:01 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:56:01 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:56:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:56:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:56:50 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:56:51 --> ErrorException: Array to string conversion
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:58:13 --> ErrorException: Undefined array key 0
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:58:14 --> ErrorException: Undefined array key 0
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 34.
+ 1 APPPATH\Views\products.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:58:46 --> ErrorException: Undefined variable $ct
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 35.
+ 1 APPPATH\Views\products.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ct', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 11:58:47 --> ErrorException: Undefined variable $ct
+[Method: GET, Route: products]
+in APPPATH\Views\products.php on line 35.
+ 1 APPPATH\Views\products.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ct', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\ProductController.php(25): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:36:00 --> ErrorException: Undefined variable $products
+[Method: POST, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(50): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:36:01 --> ErrorException: Undefined variable $products
+[Method: GET, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(50): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:36:51 --> ParseError: syntax error, unexpected token "if", expecting "," or ";"
+[Method: POST, Route: CartController/add]
+in APPPATH\Controllers\CartController.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:36:51 --> ParseError: syntax error, unexpected token "if", expecting "," or ";"
+[Method: GET, Route: CartController/add]
+in APPPATH\Controllers\CartController.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:37:11 --> ErrorException: Undefined variable $products
+[Method: POST, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(51): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:37:11 --> ErrorException: Undefined variable $products
+[Method: GET, Route: CartController/add]
+in APPPATH\Views\products.php on line 26.
+ 1 APPPATH\Views\products.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\products.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products', [], true)
+ 5 APPPATH\Controllers\CartController.php(51): view('products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:48:28 --> ErrorException: Undefined variable $products
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 26.
+ 1 APPPATH\Views\carts.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(13): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:48:28 --> ErrorException: Undefined variable $products
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 26.
+ 1 APPPATH\Views\carts.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(13): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:49:26 --> ErrorException: Undefined variable $total
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 38.
+ 1 APPPATH\Views\carts.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(13): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:49:26 --> ErrorException: Undefined variable $total
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 38.
+ 1 APPPATH\Views\carts.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(13): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:49:32 --> ErrorException: Undefined variable $total
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 38.
+ 1 APPPATH\Views\carts.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(13): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:49:33 --> ErrorException: Undefined variable $total
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 38.
+ 1 APPPATH\Views\carts.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(13): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:57:43 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 18.
+ 1 APPPATH\Views\carts.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:57:43 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 18.
+ 1 APPPATH\Views\carts.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:58:06 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:58:06 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:59:06 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:59:06 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:59:56 --> ErrorException: Undefined array key 0
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 12:59:56 --> ErrorException: Undefined array key 0
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:01:19 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:01:19 --> ErrorException: Attempt to read property "product" on array
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product" on array', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:01:40 --> ErrorException: Undefined array key 0
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:01:40 --> ErrorException: Undefined array key 0
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(26): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:13 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:13 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:23 --> ErrorException: Undefined array key 0
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:23 --> ErrorException: Undefined array key 0
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:32 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:32 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:45 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:03:45 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:04:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:04:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:05:07 --> ErrorException: Undefined variable $ct
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 28.
+ 1 APPPATH\Views\carts.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ct', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:05:07 --> ErrorException: Undefined variable $ct
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 28.
+ 1 APPPATH\Views\carts.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ct', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:08:11 --> ErrorException: Undefined variable $product
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:08:11 --> ErrorException: Undefined variable $product
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:11:09 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:11:10 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 24.
+ 1 APPPATH\Views\carts.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:14:46 --> ErrorException: Undefined variable $total
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 54.
+ 1 APPPATH\Views\carts.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 54)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:14:46 --> ErrorException: Undefined variable $total
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 54.
+ 1 APPPATH\Views\carts.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 54)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(24): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:15:28 --> ErrorException: Undefined array key "cart"
+[Method: GET, Route: carts]
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:15:29 --> ErrorException: Undefined array key "cart"
+[Method: GET, Route: carts]
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:35:30 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 APPPATH\Views\carts.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:35:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 APPPATH\Views\carts.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:35:41 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 APPPATH\Views\carts.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:35:41 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 APPPATH\Views\carts.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 5 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:36:59 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 APPPATH\Views\carts.php(57): implode(',', [...])
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 6 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:37:00 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 APPPATH\Views\carts.php(57): implode(',', [...])
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 6 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:37:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 APPPATH\Views\carts.php(57): implode(',', [...])
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 6 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:37:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: carts]
+in APPPATH\Views\carts.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php', 57)
+ 2 APPPATH\Views\carts.php(57): implode(',', [...])
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\carts.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('carts', [], true)
+ 6 APPPATH\Controllers\CartController.php(29): view('carts', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:38:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "orders.php"
+[Method: POST, Route: OrderController/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('orders.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('orders', [], true)
+ 3 APPPATH\Controllers\OrderController.php(46): view('orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:38:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "orders.php"
+[Method: GET, Route: OrderController/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('orders.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('orders', [], true)
+ 3 APPPATH\Controllers\OrderController.php(46): view('orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:39:33 --> Error: Call to a member function delete() on string
+[Method: POST, Route: OrderController/add]
+in APPPATH\Controllers\OrderController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:39:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "orders.php"
+[Method: GET, Route: OrderController/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('orders.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('orders', [], true)
+ 3 APPPATH\Controllers\OrderController.php(46): view('orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:40:22 --> Error: Class "App\Controllers\DateTime" not found
+[Method: POST, Route: OrderController/add]
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:40:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "orders.php"
+[Method: GET, Route: OrderController/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('orders.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('orders', [], true)
+ 3 APPPATH\Controllers\OrderController.php(46): view('orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:41:21 --> Error: Object of class DateTime could not be converted to string
+[Method: POST, Route: OrderController/add]
+in SYSTEMPATH\Database\Query.php on line 337.
+ 1 SYSTEMPATH\Database\Query.php(337): strtr('INSERT INTO `orders` (`user`, `products`, `price`, `date`, `status`) VALUES (:user:, :products:, :price:, :date:, :status:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `orders` (`user`, `products`, `price`, `date`, `status`) VALUES (:user:, :products:, :price:, :date:, :status:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `orders` (`user`, `products`, `price`, `date`, `status`) VALUES (:user:, :products:, :price:, :date:, :status:)', [...], false)
+ 6 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\OrderController.php(36): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:41:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "orders.php"
+[Method: GET, Route: OrderController/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('orders.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('orders', [], true)
+ 3 APPPATH\Controllers\OrderController.php(46): view('orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:43:31 --> ArgumentCountError: date() expects at least 1 argument, 0 given
+[Method: POST, Route: OrderController/add]
+in APPPATH\Controllers\OrderController.php on line 40.
+ 1 APPPATH\Controllers\OrderController.php(40): date()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 13:43:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "orders.php"
+[Method: GET, Route: OrderController/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('orders.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('orders', [], true)
+ 3 APPPATH\Controllers\OrderController.php(46): view('orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:07:31 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: admin-orders]
+in APPPATH\Controllers\AdminOrdersController.php on line 19.
+ 1 APPPATH\Controllers\AdminOrdersController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\AdminOrdersController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:07:31 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: admin-orders]
+in APPPATH\Controllers\AdminOrdersController.php on line 19.
+ 1 APPPATH\Controllers\AdminOrdersController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Controllers\\AdminOrdersController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:11:18 --> Error: Call to undefined function App\Controllers\push()
+[Method: GET, Route: admin-orders]
+in APPPATH\Controllers\AdminOrdersController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:11:18 --> Error: Call to undefined function App\Controllers\push()
+[Method: GET, Route: admin-orders]
+in APPPATH\Controllers\AdminOrdersController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:12:03 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: admin-orders]
+in APPPATH\Views\admin_orders.php on line 59.
+ 1 APPPATH\Views\admin_orders.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_orders', [], true)
+ 5 APPPATH\Controllers\AdminOrdersController.php(31): view('admin_orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:12:04 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: admin-orders]
+in APPPATH\Views\admin_orders.php on line 59.
+ 1 APPPATH\Views\admin_orders.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_orders', [], true)
+ 5 APPPATH\Controllers\AdminOrdersController.php(31): view('admin_orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:12:27 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin-orders]
+in APPPATH\Views\admin_orders.php on line 59.
+ 1 APPPATH\Views\admin_orders.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_orders', [], true)
+ 5 APPPATH\Controllers\AdminOrdersController.php(31): view('admin_orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:12:27 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin-orders]
+in APPPATH\Views\admin_orders.php on line 59.
+ 1 APPPATH\Views\admin_orders.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\phpstudy_pro\\WWW\\Order\\app\\Views\\admin_orders.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin_orders', [], true)
+ 5 APPPATH\Controllers\AdminOrdersController.php(31): view('admin_orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:21:11 --> Error: Call to a member function set() on array
+[Method: POST, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:21:11 --> Error: Call to a member function set() on array
+[Method: GET, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:22:30 --> Error: Call to a member function first() on array
+[Method: POST, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:22:31 --> Error: Call to a member function first() on array
+[Method: GET, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:22:50 --> Error: Call to a member function get() on array
+[Method: POST, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:22:50 --> Error: Call to a member function get() on array
+[Method: GET, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:23:05 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::set()
+[Method: POST, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
+CRITICAL - 2024-05-16 14:23:05 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::set()
+[Method: GET, Route: AdminOrdersController/finish/1]
+in APPPATH\Controllers\AdminOrdersController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminOrdersController->finish('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminOrdersController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\phpstudy_pro\\WWW\\Order\\public\\index.php')
